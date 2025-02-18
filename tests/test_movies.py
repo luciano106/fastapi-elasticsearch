@@ -161,9 +161,6 @@ def test_search_movies_no_results(mock_fetch_movies, client, headers, setup_test
 
     response = client.get("/api/v1/movies/search?title=NonExistent&page=1&size=10", headers=headers)
 
-    print("🔍 Debugging response JSON:", response.json())
-    print("🔍 Debugging response status code:", response.status_code)
-
     assert response.status_code == 200
     data = response.json()
 
