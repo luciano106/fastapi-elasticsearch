@@ -53,7 +53,7 @@ def search_movies_endpoint(title: str = Query(..., description="Substring to sea
     This endpoint queries Elasticsearch for movies matching the given criteria.
     It supports pagination and returns a paginated list of movies that match the search conditions.
     """
-    print(f"🔍 search_movies_endpoint - Params: title={title}, year={year}, page={page}, size={size}")
+    
     movies_data = search_movies_util(title=title, year=year, page=page, size=size)
-    print("🔍 search_movies_endpoint - Response from search_movies_util:", movies_data)
+    
     return MovieSearchResponse(**movies_data)

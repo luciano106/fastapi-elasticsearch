@@ -51,8 +51,7 @@ def index_movies(title: str = "", page: int = 1):
     all_movies = []
     total_pages = None
 
-    if not es.indices.exists(index=INDEX_NAME):
-        create_index()
+    create_index()
 
     while True:
         data = fetch_movies_from_api(title, page)
