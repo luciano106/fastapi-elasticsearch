@@ -1,0 +1,16 @@
+fastapi>=0.100          # FastAPI framework
+uvicorn[standard]>=0.23 # ASGI server with hot-reloading support
+pydantic>=2.0           # Data validation and serialization
+elasticsearch>=8.5      # Elasticsearch client
+python-dotenv>=1.0      # Environment variables management (.env)
+pyjwt[crypto]>=2.0      # JWT handling with encryption
+passlib[bcrypt]>=1.7    # Secure password hashing
+python-multipart        # Required for `form-data` in OAuth2 authentication
+requests                # HTTP client for consuming external APIs
+redis                   # Redis client for caching
+fastapi-cache2          # FastAPI caching (Redis-based)
+pytest                  # Testing framework for unit and integration tests
+pytest-asyncio          # Adds support for async tests in pytest (needed for FastAPI)
+httpx                   # Asynchronous HTTP client for testing FastAPI endpoints
+pytest-mock             # Mocking library for pytest (used to mock dependencies)
+pytest-cov
